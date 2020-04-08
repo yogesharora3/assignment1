@@ -39,6 +39,7 @@ body{
     justify-content:flex-end;
     flex-direction: row;
     flex-wrap: wrap;
+    text-transform: capitalize;
 
 }
 .nav .container-text a{
@@ -153,13 +154,12 @@ body{
     padding-top: 20px;
     background-color: rgb(252, 244, 3);
     padding-bottom:20px;
-   grid-area:m1;
 }
 .aboutme-text .Myself h2{
     font-size:40px;
     word-spacing:3px;
     letter-spacing: 1px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     line-height: 46px;
 }
 .aboutme-text .Myself p{
@@ -174,9 +174,9 @@ body{
 .aboutme-text .hob{
    background-color: rgb(252, 140, 3);
     padding-top: 20px;
-    /* width: 100%; */
-    grid-area:m2;
-    z-index: 5;
+    width: 100%;
+    /* grid-area:m2; */
+    /* z-index: 5; */
 } 
 .aboutme-text .hob h2{
     text-align: center;
@@ -194,19 +194,30 @@ body{
 .aboutme-text .hob ul li{
     margin:20px;    
 }
-.section2::after{
-    display: table;
-    content:" ";
-    clear:both;
-}
+
 @media screen and (max-width:700px)
 {
     .aboutme-text{
         grid-template-columns: auto;
         grid-row: auto auto;
-        grid-template-areas: "m1"
-                              "m2";
-
+    }
+    .aboutme-text .Myself{
+        padding-top: 10px;
+        padding-bottom:10px;
+    }
+    .aboutme-text .Myself h2{
+        font-size:25px;
+        margin-bottom: 0px;;
+    }
+    .aboutme-text .Myself p{
+        font-size: 20px;
+    }
+    .aboutme-text .hob h2{
+        font-size:25px;
+    }
+    .aboutme-text .hob ul{
+        margin:0 auto;
+        font-size: 25px;;
     }
 
 }
@@ -409,6 +420,43 @@ body{
         width:0%;
     }
 }
+@media screen and (max-width:700px)
+{
+    .section3{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+    .section3 .myImage h2{
+        padding-bottom: 10px;
+        font-size: 30px;
+    }
+    .section3 .myImage img{
+        margin:5% auto;
+    }
+    .section3 .personal-summary .myEducation{
+        padding-top:20px;
+        padding-bottom: 40px;
+    }
+    .section3 .personal-summary .myEducation h2{
+        font-size: 30px;
+    }
+    .section3 .personal-summary .myEducation ul li{
+        font-size: 20px;
+        word-spacing: 1px;
+
+    }
+    .section3 .personal-summary .skill{
+        padding-top:20px;
+        padding-bottom: 40px;
+    }
+    .section3 .personal-summary .skill h2{
+        font-size:30px;
+
+    }
+    .section3 .personal-summary .skill .skills1 h4{
+        font-size: 20px;
+    }
+}
     /* footer */
     .section4{
         background-color: rgb(117, 114, 114);
@@ -493,4 +541,30 @@ body{
     background-color: black;
     width:40px;
     text-align: center;
+}
+@media screen and (max-width:700px){
+    .section4{
+        grid-template-columns: auto;
+        grid-template-areas: "head"
+                             "soc"
+                             " moc";
+    }
+    .section4 .social-media ul{
+        justify-content: center;
+        align-content: center;
+       
+    }
+    .section4 .personal ul{
+        justify-content:flex-start;
+        
+    }
+    .section4 .personal ul li{
+        margin:0;
+    
+    }
+    .section4 .personal ul li.foo{
+       margin-right:5%;
+    }
+
+    
 }
