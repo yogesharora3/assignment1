@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0, 0.4)),url('bg1.jpeg') ;
+    width:100%;
+    min-height:100vh;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    background-attachment: fixed;
+ 
+}
+.container-text{
+    width:450px;
+    height: 490px;;
+    background-color: rgba(0,0,0,0.3);
+    border: 5px solid rgba(214, 30, 73,0.8);
+    border-left-color: mediumaquamarine;
+    border-top-color: maroon;
+    border-bottom-color: linen;
+    border-right-color: limegreen;
+    position: absolute;
+    left:52%;
+    top:52%;
+    transform: translate(-49%,-49%);
+    animation-name: box;animation-timing-function: ease;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+}
+@keyframes box{
+    0%{
+        border-left-color: rgb(0, 255, 0);
+        border-top-color: rgb(255, 255, 0);
+        border-bottom-color:rgb(255, 51, 187);
+        border-right-color: rgb(51, 204, 255);
+    }
+    25%{
+        border-left-color:rgb(204, 102, 0);
+        border-top-color:  rgb(204, 0, 153);
+        border-bottom-color: rgb(0, 51, 153);
+        border-right-color:rgb(51, 153, 102);
+    }
+    50%{
+        border-left-color: mediumaquamarine;
+        border-top-color: maroon;
+        border-bottom-color: linen;
+        border-right-color: limegreen;
+    }
+    75%{
+        
+        border-left-color: rgb(0, 255, 0);
+        border-top-color: rgb(255, 255, 0);
+        border-bottom-color:rgb(255, 51, 187);
+        border-right-color: rgb(51, 204, 255);
+    }
+    100%{
+        border-left-color:rgb(204, 102, 0);
+        border-top-color:  rgb(204, 0, 153);
+        border-bottom-color: rgb(0, 51, 153);
+        border-right-color:rgb(51, 153, 102);
+    }
+}
+
+.container-text label{
+    font-size:40px;
+    display: block;
+    width:50%;
+    margin:0 auto;
+    text-transform: uppercase;
+    color:rgb(255, 0, 0);
+    
+}
+.container-text form{
+    margin-top:0px;
+    padding-top: 0;
+    position: relative;
+     top:-100px;
+}
+.container-text input[type="text"],.container-text input[type="password"]{
+    display: block;
+    padding-top: 0;
+    margin-top: 0;
+    border:none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    width:60%;
+    height:40px;
+    margin:0 auto;
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    overflow: hidden;
+    transition:0.8s width;
+    
+}
+.container-text input[type="text"]:focus,.container-text input[type="password"]:focus{
+    width:90%;
+    background-color:rgba(0,0,0,0.7);
+    color:white;
+    
+}
+.container-text input[type="submit"]{
+    width:50%;
+    height:40px;
+    margin-top: 30px;
+    margin-left:25%;
+    margin-right: 25%;
+    font-size: 30px;
+    text-transform: capitalize;
+    background-color:rgb(0, 255, 0);
+    color:;
+    background-clip: border-box;
+    outline: none;
+    border:none;
+    border-radius:25px;
+cursor: pointer;}
+.container-text input[type="submit"]:hover{
+    background-color: darkorange;
+
+}
+.container-text img{
+    position: relative;
+    top:-110px;
+    left:30%;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-left-color: mediumaquamarine;
+    border-top-color: maroon;
+    border-bottom-color: linen;
+    border-right-color: limegreen;
+    animation-name: image;
+    animation-timing-function: ease;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+}
+@keyframes image{
+    0%{
+        border-left-color: rgb(0, 255, 0);
+        border-top-color: rgb(255, 255, 0);
+        border-bottom-color:rgb(255, 51, 187);
+        border-right-color: rgb(51, 204, 255);
+    }
+    25%{
+        border-left-color:rgb(204, 102, 0);
+        border-top-color:  rgb(204, 0, 153);
+        border-bottom-color: rgb(0, 51, 153);
+        border-right-color:rgb(51, 153, 102);
+    }
+    50%{
+        border-left-color: mediumaquamarine;
+        border-top-color: maroon;
+        border-bottom-color: linen;
+        border-right-color: limegreen;
+    }
+    75%{
+        
+        border-left-color: rgb(0, 255, 0);
+        border-top-color: rgb(255, 255, 0);
+        border-bottom-color:rgb(255, 51, 187);
+        border-right-color: rgb(51, 204, 255);
+    }
+    100%{
+        border-left-color:rgb(204, 102, 0);
+        border-top-color:  rgb(204, 0, 153);
+        border-bottom-color: rgb(0, 51, 153);
+        border-right-color:rgb(51, 153, 102);
+    }
+}
+.fa{
+    font-size:80px;
+}

@@ -1,0 +1,438 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0;
+    margin-top: 0;
+    padding:0;
+    outline: none;
+}
+/* header */
+.header{
+    background-image: url("back1.jpg");
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:100vh;
+    background-attachment: fixed;
+}
+/* navigation */
+.nav{
+    
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+}
+.nav h2{
+    color:white;
+    padding:10px 12px;
+    font-size: 25px;
+}
+.nav .container-text{
+    flex:1;
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.nav .container-text a{
+    display:block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+     cursor:pointer;
+     padding:10px 12px;
+     color:white;
+}
+.nav .container-text a:hover{
+    background-color: green;
+}
+/* text in header */
+.header .text { 
+    padding-left:5%;
+    padding-top: 10%;
+ display: flex;
+ flex-direction: column;
+ justify-content:center;
+ align-content: center;
+}
+.header .text h1{
+    color:white;
+    text-shadow:0 0 3px yellow, 0 0 5px green;
+    font-size: 60px;
+}
+.header .text h3{
+    margin-top: 20px;;
+    color:white;
+    text-shadow:0 0 3px yellow, 0 0 5px green;
+    font-size: 40px;
+}
+.header .text a{
+    width:200px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color: green;
+    color:white;
+    border-radius: 40px;
+}
+.header .text a:hover{
+    border:1px solid white;
+    background: transparent;
+}
+.header::after{
+    display: table;
+    clear: both;
+    content:"";
+}
+/* section2  */
+.section2{
+    height: auto;
+    background-color:black;
+}
+
+ .k1{
+    padding:20px;
+    color:white;
+    background-color: black;
+}
+.aboutme-text{
+    display: grid;
+    grid-template-columns: 50%  50%;
+    grid-template-rows: 100%;
+    grid-gap: 0px;
+   
+    width:100%;
+}
+.aboutme-text .Myself{
+    padding-top: 20px;
+    background-color: rgb(252, 244, 3);
+    padding-bottom:20px;
+   
+
+}
+.aboutme-text .Myself h2{
+    font-size:40px;
+    word-spacing:3px;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    line-height: 46px;
+}
+.aboutme-text .Myself p{
+    font-size:30px;
+    color:grey;
+    word-spacing: 3px;
+    text-indent: 30px;
+    letter-spacing: 1px;
+    line-height:35px;
+}
+
+.aboutme-text .hob{
+   background-color: rgb(252, 140, 3);
+    padding-top: 20px;
+    width: 100%;
+} 
+.aboutme-text .hob h2{
+    text-align: center;
+    font-size: 40px;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+}
+.aboutme-text .hob ul{
+    margin-top: 60px;
+    margin-left: 70px;
+    line-height:35px;
+    font-size: 30px;
+    color: grey;
+}
+.aboutme-text .hob ul li{
+    margin:20px;    
+}
+/* section3 */
+.section3{
+    margin-top: 0;
+    padding-top: 0px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.section3 .myImage {
+    background-color:rgba(0,0,0,0.6);
+    padding-top:20px;
+}
+.section3 .myImage h2{
+    padding-top: 0px;
+    padding-bottom: 20px;;
+    text-align:center;
+    font-size: 40px;
+    color:white;
+}
+.section3 .myImage img{
+    height:400px;
+    display: block;
+    margin:19% auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    animation-name: myself123;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+}
+@keyframes myself123{
+    to{
+        transform: rotateY(360deg);
+    }
+    from{
+        transform: rotateY(0deg);
+    }
+}
+.section3 .personal-summary{
+    display:flex;
+    flex-direction: column;
+    
+}
+.section3 .personal-summary .myEducation {
+    background-color: rgb(50, 168, 72);
+
+}
+.section3 .personal-summary .myEducation h2{
+    text-align: center;
+    font-size:40px;
+    padding-top:8px;
+    padding-bottom: 5px;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+}
+.section3 .personal-summary .myEducation ul{
+    margin-top: 1%;
+    margin-bottom:2%;
+    line-height: 43px;
+}
+.section3 .personal-summary .myEducation ul li{
+    font-size:30px;
+    letter-spacing: 0px;
+    word-spacing: 4px;
+}
+.section3 .personal-summary .skill{
+    background-color: rgba(0,0,0,0.3);
+    padding-bottom: 10px;;
+}
+.section3 .personal-summary .skill h2{
+    margin:10px;
+    text-align: center;
+    font-size:50px;
+
+    letter-spacing: 3px;
+    word-spacing: 3px;
+}
+.section3 .personal-summary .skill .skills1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+ } 
+.skills1 h4{
+ margin-left:12px;
+ font-size: 30px;;
+}
+.bar{
+    margin:10px 0;
+    margin-left: 2px;
+    background:#353b48;
+    display:block;
+    height:16px;
+    border-radius: 12px;
+    overflow:hidden;
+    box-shadow: 0 0 10px #2187e7b3;
+}
+.bar span{
+    height:16px;
+    float:left;
+    }
+
+.bar .c{
+    background-color: yellow;
+    width:90%;
+    animation-name: km;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+@keyframes km{
+    to{
+        width:80%;
+    }
+    from{
+        width:0%;
+    }
+}
+.bar .c1{
+    background-color: rgb(57, 252, 3);
+    width:70%;
+    animation-name: km1;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes km1{
+    to{
+        width:70%;
+    }
+    from{
+        width:0%;
+    }
+}
+.bar .java{
+    background-color: rgb(209, 13, 180);
+    width:70%;
+    animation-name: km3;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes km3{
+    to{
+        width:70%;
+    }
+    from{
+        width:0%;
+    }
+}
+
+.bar .python{
+    background-color: rgb(88, 50, 168);
+    width:60%;
+    animation-name: km4;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+@keyframes km4{
+    to{
+        width:60%;
+    }
+    from{
+        width:0%;
+    }
+}
+.bar .HTML{
+    background-color: rgb(252, 186, 3);
+    width:85%;
+    animation-name: km5;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes km5{
+    to{
+        width:85%;
+    }
+    from{
+        width:0%;
+    }
+}
+.bar .css{
+    background-color: rgb(230, 50, 80);
+    width:80%;
+    animation-name: km6;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes km6{
+    to{
+        width:80%;
+    }
+    from{
+        width:0%;
+    }
+}
+    /* footer */
+    .section4{
+        background-color: rgb(117, 114, 114);
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "head head"
+                            " soc   moc";
+        padding-bottom: 40px;
+    }
+    .section4 h2{
+        grid-area: head;
+
+    }
+    .section4 .social-media{
+        grid-area: soc;
+    }
+    .section4 .social-media ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+    .section4 .social-media ul li{
+    
+        margin:20px 60px 0px 0;
+        
+    }
+    .section4 .social-media ul li .fa{
+        font-size: 30px;
+        color:black;
+    }
+
+
+    .section4 .personal{
+        grid-area: moc;
+    }
+    .section4  ul{
+        list-style-type: none;
+
+    }
+    .section4 .personal ul{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .section4 .personal ul li{
+        margin:20px 12px 0px 60px;
+        font-size: 25px;
+        
+
+    }   
+    .section4 .personal ul li a{
+        text-decoration: none;
+        color:black;
+    } 
+    .section4 h2 .fa{
+        animation-name: dil;
+        animation-iteration-count: infinite;
+        animation-duration: 0.2s;
+        margin:0 12px;
+    }
+    @keyframes  dil{
+        to{
+            transform: scaleX(1.5);
+        }
+        from{
+            transform: scaleX(1);
+        }
+    }
+   .section4 .social-media ul li a:hover .fa-instagram{
+       color: rgb(225,48,108);     
+   } 
+   .section4 .social-media ul li a:hover .fa-linkedin-square{
+       color:blue;
+   }
+   .section4 .social-media ul li a:hover .fa-facebook{
+    color:blue;
+}
+.section4 .social-media ul li a:hover .fa-github{
+    color:white;
+    background-color: black;
+    width:40px;
+    text-align: center;
+}
