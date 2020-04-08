@@ -24,6 +24,9 @@ body{
     display: flex;
     flex-wrap: wrap;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    position: fixed;
+    z-index: 5;
+    width: 100%;
 }
 .nav h2{
     color:white;
@@ -36,6 +39,7 @@ body{
     justify-content:flex-end;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 .nav .container-text a{
     display:block;
@@ -89,6 +93,45 @@ body{
     clear: both;
     content:"";
 }
+@media screen and (max-width:700px)
+{
+    .header{
+        min-height:100vh;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .nav{
+        flex-direction: column;
+        justify-content: center;
+        position: initial;
+        
+
+    }
+    .nav h2{
+        text-align: center;
+        display: block;
+        font-size: 17px;
+    }
+    .nav .container-text{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav .container-text a{
+        font-size:17px;
+    }
+    .header .text h1{
+        font-size:40px;
+    }
+    .header .text h3{
+        font-size:25px;
+    }
+    .header .text a{
+        width:150px;
+        /* margin-top:20px; */
+        font-size:20px;
+    }
+
+}
 /* section2  */
 .section2{
     height: auto;
@@ -105,15 +148,12 @@ body{
     grid-template-columns: 50%  50%;
     grid-template-rows: 100%;
     grid-gap: 0px;
-   
-    width:100%;
 }
 .aboutme-text .Myself{
     padding-top: 20px;
     background-color: rgb(252, 244, 3);
     padding-bottom:20px;
-   
-
+   grid-area:m1;
 }
 .aboutme-text .Myself h2{
     font-size:40px;
@@ -134,7 +174,9 @@ body{
 .aboutme-text .hob{
    background-color: rgb(252, 140, 3);
     padding-top: 20px;
-    width: 100%;
+    /* width: 100%; */
+    grid-area:m2;
+    z-index: 5;
 } 
 .aboutme-text .hob h2{
     text-align: center;
@@ -151,6 +193,22 @@ body{
 }
 .aboutme-text .hob ul li{
     margin:20px;    
+}
+.section2::after{
+    display: table;
+    content:" ";
+    clear:both;
+}
+@media screen and (max-width:700px)
+{
+    .aboutme-text{
+        grid-template-columns: auto;
+        grid-row: auto auto;
+        grid-template-areas: "m1"
+                              "m2";
+
+    }
+
 }
 /* section3 */
 .section3{
