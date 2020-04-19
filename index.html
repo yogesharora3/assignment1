@@ -14,7 +14,7 @@
 
     <div class="main">
         <div class="container">
-            <img src="image\user.png" alt="user-image" class="responsive">
+            <!-- <img src="image\user.png" alt="user-image" class="responsive"> -->
             <div style="text-align: center;">
                 <hr
                     style="width:60px;display: inline-block;margin-top:0px;color: white;padding-bottom: 8px;border:none; border-top:1px solid white">
@@ -22,23 +22,104 @@
                 <hr
                     style="display:inline-block;width:60px;color: white;padding-bottom: 8px;border:none; border-top:1px solid white">
             </div>
-            <form action="about.html" method="get">
+            <form action="about.html" method="get" name="myform" onsubmit="return mySubmit()" >
                 <h3>User Name</h3>
                 <div class="container-input">
                     <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                    <input type="text" name="user-name" placeholder="username">
+                    <input type="text" name="user-name" placeholder="username" id="myname" >
                 </div>
                 <h3>Password</h3>
                 <div class="container-input">
                     <i class="fa fa-key" aria-hidden="true"></i>
-                    <input type="password" name="password" placeholder="password">
+                    <input type="password" name="password" placeholder="password "  id="mypassword">
                 </div>
+                <h3> Confirm Password</h3>
+                <div class="container-input">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" name="password2" placeholder="password2" id="checkpassword">
+                </div>
+
                 <div class="s1">
                     <input type="submit" value="login" name="submit">
                 </div>
             </form>
         </div>
     </div>
+    <script>
+        function myName(){
+            // alert("i am yogesh");
+            var x=document.forms["myform"]["user-name"].value;
+            var letters = /^[A-Za-z]+$/;
+            if (x == "") {
+            alert("Name must be filled out");
+            document.getElementById("myname").focus();
+            document.getElementById("myname").style.borderBottom="1px solid red";
+            return false;
+            }
+          else if(!x.match(letters)){
+                alert('Username must have alphabet characters only');
+                document.getElementById("myname").focus();
+                document.getElementById("myname").style.borderBottom="1px solid red";
+                return false;
+           }
+           document.getElementById("myname").style.borderBottom="1px solid white"
+           return true;
+        }
+        function myPassword(){
+            var y=document.forms["myform"]["password"].value;
+            if(y===""){
+                alert("password field can not be empty");
+                document.getElementById("mypassword").focus();  
+                document.getElementById("mypassword").style.borderBottom="1px solid red";
+                return false;
+            }
+            if(y.length<8){
+                alert("password must be 8 or more character's");
+                document.getElementById("mypassword").focus();  
+                document.getElementById("mypassword").style.borderBottom="1px solid red";
+                return false;             
+            }
+            document.getElementById("mypassword").style.borderBottom="1px solid white"
+            return true;
+        }
+        function checkPassword(){
+            var y=document.forms["myform"]["password"].value;
+            var z=document.forms["myform"]["password2"].value;
+            if(z===""){
+                alert("confirm field can not be empty");
+                
+            document.getElementById("checkpassword").style.borderBottom="1px solid red";
+                document.getElementById("checkpassword").focus();
+                return false;
+            }
+            else if(y!==z){
+                alert("password entered in confirm field don't match the pasword");
+                
+            document.getElementById("checkpassword").style.borderBottom="1px solid red";
+                document.getElementById("checkpassword").focus();
+                return false;
+            }
+            document.getElementById("checkpassword").style.borderBottom="1px solid white";            
+            return true;
+            
+        }
+        function mySubmit(){
+            // var m1=myName();
+            // var m2=myPassword();
+            // var m3=checkPassword();
+
+            if(myName()){
+                if(myPassword())
+                {
+                    if(checkPassword()){
+                    return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+    </script>
 
 </body>
 
